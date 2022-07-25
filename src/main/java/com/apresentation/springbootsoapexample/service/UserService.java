@@ -30,11 +30,16 @@ public class UserService {
         ryan.setEmpId(3);
         ryan.setSalary(7500);
 
+        User vinicius = new User();
+        ryan.setName("Vinicius");
+        ryan.setEmpId(4);
+        ryan.setSalary(9000);
+
         users.put(peter.getName(), peter);
         users.put(sam.getName(), sam);
         users.put(ryan.getName(), ryan);
-
-    }
+        users.put(vinicius.getName(), vinicius);
+    };
 
 
     public User getUsers(String name) {

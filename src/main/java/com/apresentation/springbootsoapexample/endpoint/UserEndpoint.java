@@ -11,10 +11,12 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 @Endpoint
 public class UserEndpoint {
+
+    private static final String NAMESPACE_URI = "http://apresentation.com/spring-boot-soap-example";
     @Autowired
     private UserService userService;
 
-    @PayloadRoot(namespace = "http://apresentation.com/spring-boot-soap-example",
+    @PayloadRoot(namespace = NAMESPACE_URI,
             localPart = "getUserRequest")
     @ResponsePayload
     public GetUserResponse getUserRequest(@RequestPayload GetUserRequest request) {
